@@ -1,17 +1,13 @@
 body {
     margin: 0;
+    overflow-x: hidden;
     padding: 0;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-section {
-    padding: 10px 180px;
-}
 
-.best-places-section,
-.explore-section {
-    padding: 10px 130px;
-}
+
+
 
 nav {
     position: fixed;
@@ -19,7 +15,7 @@ nav {
     z-index: 100;
     display: flex;
     justify-content: space-between;
-    height: 60px;
+    
     background-color: #fff;
     padding: 10px 70px;
     box-shadow: 0 10px 20px hsla(0, 0%, 28%, 0.147);
@@ -37,11 +33,14 @@ nav {
 .logo-div svg {
     margin-right: 30px;
 }
-
+.underline h5{
+    font-size: 1rem;
+}
 .underline {
     border-bottom: 2px solid black;
     padding-bottom: 2px;
     margin-bottom: 10px;
+   
 }
 
 .underline:hover {
@@ -62,12 +61,13 @@ h5 {
 nav ul {
     list-style: none;
     display: flex;
-    align-items: center;
+    
     width: max-content;
 }
 
 nav ul li {
     margin-left: 40px;
+    margin-bottom: 10px;
     display: flex;
     align-items: center;
     fill: black;
@@ -87,12 +87,12 @@ nav ul li:hover .nav-icon {
     margin-right: 5px;
 }
 
-.nav-items {
+.nav-items-ul {
     width: max-content;
 }
 
 .category-section {
-    padding-top: 110px;
+    padding-top: 5%;
 }
 
 .categories {
@@ -120,13 +120,16 @@ nav ul li:hover .nav-icon {
     display: flex;
     justify-content: space-between;
 }
-
+.category-heading h2{
+    font-weight: 700;
+}
 .category-heading i {
-
+   text-align: center;
     background-color: rgba(141, 142, 143, 0.828);
     padding: 10px;
-    width: 15px;
-    height: 15px;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
     border-radius: 50px;
 }
 
@@ -148,13 +151,20 @@ nav ul li:hover .nav-icon {
     display: flex;
     justify-content: space-between;
 }
-
+.top-restuarants-heading  .arrow-icons-div{
+    width: 100px;
+}
+.top-restuarants-heading h2{
+    font-weight: 700;
+}
 .top-restuarants-heading i {
 
     background-color: rgba(141, 142, 143, 0.828);
     padding: 10px;
-    width: 15px;
-    height: 15px;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    text-align: center;
     border-radius: 50px;
 }
 
@@ -185,23 +195,29 @@ nav ul li:hover .nav-icon {
 
 .shadow h2 {
     margin-left: 5px;
-    margin-top: 45px;
+    margin-top: 50px;
+    font-size: 22px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-.restuarant h3,
-h4 {
+.restuarant h3{
+    font-size: 1rem;
     margin: 2px;
+    font-weight: 700;
+}
+.restuarant h4{
+    font-size: 17px;
 }
 
 .restuarant p {
     margin: 1px;
     color: #888;
     font-weight: 400;
+    font-size: 15px;
 }
 
 .restuarant .context {
-    width: 250px;
+    width: 245px;
     padding: 5px;
 }
 
@@ -215,15 +231,17 @@ h4 {
 .restuarant:hover {
     transform: scale(.95);
 }
-
+.food-delivery h2{
+    font-size: 30px;
+    font-weight: 700;
+}
 .food-delivery-filter {
     padding-top: 10px;
     margin-bottom: 20px;
     overflow-x: auto;
     width: 100%;
-    height: 100px;
+    height:100px;
 }
-
 .food-delivery-filter::-webkit-scrollbar {
     display: none;
 }
@@ -237,11 +255,27 @@ h4 {
     padding-right: 15px;
     padding-bottom: 5px;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     border: 1px solid #888;
     box-shadow: 10px 4px 15px rgba(0, 0, 0, 0.117);
 }
 
+.sort-btn{
+    border-radius: 25px;
+    margin-right: 20px;
+    height: 30px;
+    width: fit-content;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 5px;
+    display: flex;
+    align-items: center;
+    border: 1px solid #888;
+    background:none;
+    font-weight: 700;
+    color: #686868;
+    box-shadow: 10px 4px 15px rgba(0, 0, 0, 0.117);
+}
 .filter p {
     font-weight: 700;
     color: #686868;
@@ -249,17 +283,31 @@ h4 {
     align-items: center;
     width: max-content;
 }
+.sort-dropdown{
+    position: absolute;
+}
+
+.sort-dropdown-menu{
+    position: absolute;
+    left: 100px;
+    z-index: 9999;
+    background-color: #fc8019;
+}
 
 
 
-.food h3,
-h4 {
+.food h3 {
+    font-size: 1rem;
     margin: 2px;
     display: flex;
     align-items: center;
 }
+.food h4{
+    font-size: 17px;
+}
 
 .food p {
+    font-size: 15px;
     margin: 1px;
     color: #888;
     font-weight: 400;
@@ -271,7 +319,6 @@ h4 {
 }
 
 .food {
-    margin: 10px;
     width: 230px;
     height: 280px;
     transition: transform 0.3s ease-in-out;
@@ -284,7 +331,7 @@ h4 {
 .foods {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 5px;
+    
 }
 
 .food-img-div {
@@ -316,7 +363,8 @@ h4 {
 
 .food-img-shadow h2 {
     margin-left: 5px;
-    margin-top: 45px;
+    margin-top: 50px;
+    font-size: 22px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 
 }
@@ -344,21 +392,21 @@ h4 {
 .star-icon {
     margin-right: 5px;
 }
-
-.cities {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 5px;
+.best-places-section h2{
+    margin-top: 3rem;
+    font-size: 25px;
+    font-weight: 700;
 }
 
 .city {
-    margin: 5px;
-    width: 250px;
-    padding: 10px;
-    height: 40px;
+    margin: 2px;
+    box-sizing: border-box;
+    padding: 0 10px;
+    height: fit-content;
+    min-height: 50px;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     border: 1px solid #d1d1d1;
     border-radius: 15px;
     cursor: pointer;
@@ -367,7 +415,7 @@ h4 {
 .city p {
     color: #292929;
     font-weight: 600;
-
+    margin: 2px;
 }
 
 .show-more {
@@ -379,6 +427,10 @@ h4 {
 .explore-section {
     margin-top: 3rem;
 }
+.explore-section h2{
+    font-size:25px;
+    font-weight: 700;
+}
 
 .explore {
     width: 100%;
@@ -386,13 +438,12 @@ h4 {
 }
 
 .explore-btn {
+    margin-top: 3px;
     margin-left: 10px;
-    width: 50%;
+    width: 100%;
     padding: 10px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    height: 45px;
+    text-align: center;
     border: 1px solid #d1d1d1;
     border-radius: 15px;
     cursor: pointer;
@@ -404,31 +455,35 @@ h4 {
 }
 
 .app-download-section {
+    margin-top: 3rem;
     padding: 0;
     background-color: rgb(240, 240, 245);
 }
 
 .download-app {
-    padding: 10px 140px;
+    
     display: flex;
     justify-content: space-between;
     align-content: center;
 }
-
-.download-heading {
-    width: 400px;
+.download-heading h1{
+   margin-top: 10px;
 }
 
 .app-download-btn {
     margin-top: 20px;
-    width: 180px;
+    width:75%;
 }
 
 footer {
     color: #fff;
-    padding: 100px 140px;
+   
     background-color: #000000eb;
     height: fit-content;
+}
+footer h4,h2{
+    font-size: 1.1rem;
+
 }
 
 .footer-logo {
@@ -471,7 +526,9 @@ footer ul li {
 
 .more-cities {
     border: 1px solid #686868;
-    height: 25px;
+    width: 150px;
+
+    height: 40px;
     padding: 5px 10px;
     border-radius: 5px;
 }
